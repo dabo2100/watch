@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
+import Shop from "./pages/Shop";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
               element={<h1>Prodcut Details</h1>}
             />
             <Route path="about" element={<h1>About Us Page Details</h1>} />
+            <Route path="Shop" element={<Shop/>} />
+
           </Route>
           <Route path="*" element={<h1>404 Page | Page Not Found</h1>} />
         </Routes>
