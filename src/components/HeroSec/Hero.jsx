@@ -1,4 +1,4 @@
-import SwiperApp from "./swiper/SwiperApp";
+import SwiperApp from "../swiper/SwiperApp"
 
 export default function Hero() {
   return (
