@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import Shop from "./pages/Shop";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
@@ -8,7 +9,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route index element={<h1>Home Page</h1>} />
+            <Route index element={<HomePage/>} />
             <Route path="products" element={<h1>Home Page</h1>} />
             <Route
               path="products/:category_id"
