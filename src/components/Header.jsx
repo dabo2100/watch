@@ -9,6 +9,7 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import logo from '/src/assets/logo.png'
 import { FaChevronDown } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
+import { IoMenu } from "react-icons/io5";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,9 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col items-center  bg-[#fafafa] ">
+    <div className=" w-full flex flex-col items-center  bg-[#fafafa] ">
       <div className=" container bg-[#fafafa] w-full ">
-        <div className=" border-b border-[#d9d9d9] flex items-center justify-between p-4">
+        <div className=" border-b border-[#d9d9d9] hidden md:flex items-center justify-between p-4">
           <div className="flex items-center gap-6 ">
             <div className="flex items-center gap-4 ">
               <LiaShuttleVanSolid size={20} />
@@ -54,53 +55,76 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-between h-[106px] border-b border-[#d9d9d9] p-4 ">
-          <img src={logo} alt="" />
-          <nav className="flex items-center gap-12">
-            <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Home</a>
-            <div className="relative group inline-block">
-              <a href="#" className="text-[14px] text-[#333E48] font-semibold flex items-center gap-2 cursor-pointer font-(family-name:--main-font)" style={{ fontFamily: "var(--main-font)" }}>
-                Pages
-                <FaChevronDown className="text-sm mt-[2px]" />
-              </a>
-              <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
-              <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">About Us</a></li>
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Contact</a></li>
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">FAQ</a></li>
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Terms & Conditions</a></li>
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Products</a></li>
-              </ul>
-            </div>
-            <div className="relative group inline-block">
-              <a href="#" className="text-[14px] text-[#333E48] font-semibold flex items-center gap-2 cursor-pointer" style={{ fontFamily: "var(--main-font)" }}>
-                Shop
-                <FaChevronDown className="text-sm mt-[2px]" />
-              </a>
-              <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
-              <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Shop </a></li>
-                <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Wishlist</a></li>
-              </ul>
-            </div>
+        <div className="sticky top-0 z-50 bg-[#fafafa]">
+          <div className="container mx-auto flex items-center justify-between h-[106px] border-b border-[#d9d9d9] p-4">
+            <img src={logo} alt="" />
+            <nav className="hidden lg:flex items-center gap-12  ">
+              <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Home</a>
+              <div className="relative group inline-block">
+                <a href="#" className="text-[14px] text-[#333E48] font-semibold flex items-center gap-2 cursor-pointer font-(family-name:--main-font)" style={{ fontFamily: "var(--main-font)" }}>
+                  Pages
+                  <FaChevronDown className="text-sm mt-[2px]" />
+                </a>
+                <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
+                <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">About Us</a></li>
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Contact</a></li>
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">FAQ</a></li>
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Terms & Conditions</a></li>
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Products</a></li>
+                </ul>
+              </div>
+              <div className="relative group inline-block">
+                <a href="#" className="text-[14px] text-[#333E48] font-semibold flex items-center gap-2 cursor-pointer" style={{ fontFamily: "var(--main-font)" }}>
+                  Shop
+                  <FaChevronDown className="text-sm mt-[2px]" />
+                </a>
+                <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
+                <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Shop </a></li>
+                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Wishlist</a></li>
+                </ul>
+              </div>
 
 
-            <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Blog</a>
-            <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold ">Gallery</a>
-          </nav>
-          <div className="flex items-center  gap-3">
-            <div className="relative inline-block" ref={searchRef}>
-              <FaSearch onClick={() => setsearchOpen(!searchOpen)} className="cursor-pointer text-2xl text-[#EB6A2A]" />
-              {searchOpen && (
-                <div className="absolute right-0 mt-2   z-50 bg-white animate-fadeIn">
-                  <input type="text" placeholder="Find your product" className="p-3 border text-[ #959595] border-[#222222] w-[300px] h-[50px]  text-sm " />
+              <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Blog</a>
+              <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold ">Gallery</a>
+            </nav>
+            {/* burger menu */}
+            <div className="w-full flex lg:hidden items-center justify-end px-4">
+              <IoMenu onClick={() => document.getElementById('menu_modal').showModal()} className="text-[#EB6A2A] text-3xl cursor-pointer" />
+            </div>
+            {/* Burger Menu Modal*/}
+            {/* You can open the modal using document.getElementById('ID').showModal() method */}
+            <dialog id="menu_modal" className="modal">
+              <div className="modal-box w-[350px] h-dvh absolute top-0 left-0">
+                <form method="dialog" className="flex justify-end">
+                  <button className="btn rounded-xl"> X </button>
+                </form>
+                <div className="modal-action">
                 </div>
-              )}
-            </div>
-            <div className=" cursor-pointer relative inline-block" onClick={() => setIsOpen(true)}>
-              <LiaShoppingBagSolid className="text-3xl text-[#EB6A2A]" />
-              <span className=" absolute -top-1 -right-1  bg-[#EB6A2A] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center  rounded-full border-[#ffffff] border-2"> 0
-              </span>
+                <a href="" className="block px-4 py-2 text-[#000000]  hover:text-blue-400 text-[14px] font-(family-name:--main-font) font-bold">Home</a>                
+                <a href="" className="block px-4 py-2 text-[#000000]  hover:text-blue-400 text-[14px] font-(family-name:--main-font) font-bold">Pages</a>                
+                <a href="" className="block px-4 py-2 text-[#000000]  hover:text-blue-400 text-[14px] font-(family-name:--main-font) font-bold">Shop</a>                
+                <a href="" className="block px-4 py-2 text-[#000000]  hover:text-blue-400 text-[14px] font-(family-name:--main-font) font-bold">Blog</a>                
+                <a href="" className="block px-4 py-2 text-[#000000]  hover:text-blue-400 text-[14px] font-(family-name:--main-font) font-bold">Gallery</a>                
+              </div>
+            </dialog>
+
+            <div className="flex items-center  gap-3">
+              <div className="relative inline-block" ref={searchRef}>
+                <FaSearch onClick={() => setsearchOpen(!searchOpen)} className="cursor-pointer text-2xl text-[#EB6A2A]" />
+                {searchOpen && (
+                  <div className="absolute right-0 mt-2   z-50 bg-white animate-fadeIn">
+                    <input type="text" placeholder="Find your product" className="p-3 border text-[ #959595] border-[#222222] w-[300px] h-[50px]  text-sm " />
+                  </div>
+                )}
+              </div>
+              <div className=" cursor-pointer relative inline-block" onClick={() => setIsOpen(true)}>
+                <LiaShoppingBagSolid className="text-3xl text-[#EB6A2A]" />
+                <span className=" absolute -top-1 -right-1  bg-[#EB6A2A] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center  rounded-full border-[#ffffff] border-2"> 0
+                </span>
+              </div>
             </div>
           </div>
         </div>
