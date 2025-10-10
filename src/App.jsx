@@ -2,15 +2,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
 import Shop from "./pages/Shop";
 import HomePage from "./pages/HomePage";
+import Product from "./pages/Product";
 
 export default function App() {
   return (
-    <div className="w-full h-dvh overflow-auto bg-white text-black">
+    <div className="w-full  bg-white text-black">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage/>} />
-            <Route path="products" element={<h1>Home Page</h1>} />
+            <Route path="products" element={<Product/>} />
             <Route
               path="products/:category_id"
               element={<h1>Products By Category</h1>}
