@@ -18,7 +18,7 @@ export default function AboutUsPage() {
 
         {/* OUR HISTORY */}
 
-        <div className='flex flex-row justify-between py-32  px-52 '>
+        <div className='flex flex-row justify-between py-32 px-3'>
 
             <div className='w-1/2'>
                 <h1 className='text-blue-700 font-medium'>OUR HISTORY</h1>
@@ -52,7 +52,7 @@ export default function AboutUsPage() {
 
         </div>
 
-        <div className='flex flex-row justify-between py-20  px-52 gap-10 '>
+        <div className='flex flex-row justify-between py-20  px-3 gap-10 '>
 
             {/* Our vision img */}
             <div>
@@ -79,7 +79,7 @@ export default function AboutUsPage() {
         {/* end of our vision */}
 
         {/* START OF ANGLES */}
-        <div className='px-52'>
+        <div className='px-3'>
             <h1 className='text-blue-700'>ANGELS</h1>
             <h1 h1 className='font-bold text-3xl mb-8'>Meet with our Team</h1>
 
