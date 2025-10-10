@@ -13,7 +13,7 @@ export default function AboutUsPage() {
     <div className='flex flex-col'>
         <div className='flex w-full bg-gray-200 h-18'>
             <h3 className='flex pl-50 items-center'>
-                <a href="/HomePage" className='text-gray-600'>Home  </a> > About Us
+                <a href="/HomePage" className='text-gray-600'>Home  </a>  About Us
             </h3>
         </div>
 
