@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import AboutUsCard from '../components/AboutUsCard'
 import { FaCheck } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
