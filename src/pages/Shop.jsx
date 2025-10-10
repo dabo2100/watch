@@ -40,7 +40,7 @@ const StarIcon = ({ filled = false }) => (
   </svg>
 );
 
-export default function WatchProducts() {
+export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [priceRange, setPriceRange] = useState("all");
   const [sortBy, setSortBy] = useState("featured");
