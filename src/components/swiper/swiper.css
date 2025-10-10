@@ -19,3 +19,90 @@
   height: 100%;
   object-fit: cover;
 }
+
+/* Staggered entrance animations for children inside .con */
+.con {
+  overflow: hidden; /* keep things tidy during animation */
+}
+
+.con .stagger-item {
+  opacity: 0;
+  transform: translateY(20px) scale(0.99);
+  animation-name: enterUpFade;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.22,.98,.35,1);
+  /* each item will use a CSS variable --order to stagger */
+  animation-delay: calc(var(--order, 0) * 140ms);
+}
+
+/* Slightly different animation for large image so it pops in a bit later and scales */
+.con .stagger-item.img {
+  transform-origin: center;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(.16,.84,.24,1);
+}
+
+@keyframes enterUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Utility: when slide is not active, keep items invisible to avoid flashes */
+.swiper-slide:not(.swiper-slide-active) .stagger-item {
+  opacity: 0;
+  transform: translateY(8px) scale(0.99);
+  animation: none;
+}
+
+/* TAGHEUER letter-by-letter animation */
+.tag-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.tag-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(36px) rotateX(10deg);
+  animation-name: tagEnter;
+  animation-duration: 640ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.22,.9,.28,1);
+  animation-delay: calc(var(--order, 0) * 60ms);
+  will-change: transform, opacity;
+  color: inherit;
+}
+
+@keyframes tagEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) rotateX(12deg) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) rotateX(0deg) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+/* make letters invisible when slide not active */
+.swiper-slide:not(.swiper-slide-active) .tag-letter {
+  opacity: 0;
+  animation: none;
+  transform: translateY(8px);
+}

@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/rubik": "^5.2.8",
     "@tailwindcss/vite": "^4.1.14",
+    "animate.css": "^4.1.1",
     "axios": "^1.12.2",
     "daisyui": "^5.1.29",
     "formik": "^2.4.6",
