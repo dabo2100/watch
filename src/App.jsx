@@ -3,6 +3,7 @@ import MainLayout from "./MainLayout";
 import Shop from "./pages/MohamedKamel/Shop";
 import HomePage from "./pages/HomePage";
 import Product from "./pages/Product";
+import AboutUsPage from "./pages/AboutUsPage";
 import Contact from "./pages/MoTolba/Contact";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
+            <Route path="/AboutUs" element={<AboutUsPage/>}/>
             <Route path="products" element={<Product />} />
             <Route
               path="products/:category_id"
