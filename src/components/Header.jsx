@@ -8,10 +8,23 @@ import { FaSearch } from "react-icons/fa";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import logo from '/src/assets/logo.png'
 import { FaChevronDown } from "react-icons/fa6";
-
-
+import { useState, useRef, useEffect } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchOpen, setsearchOpen] = useState(false);
+
+  const searchRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setsearchOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <div className="w-full flex flex-col items-center  bg-[#fafafa] ">
       <div className=" container bg-[#fafafa] w-full ">
@@ -76,12 +89,35 @@ export default function Header() {
             <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold ">Gallery</a>
           </nav>
           <div className="flex items-center  gap-3">
-            <FaSearch className="text-2xl text-[#EB6A2A]" />
-            <div className="relative inline-block">
+            <div className="relative inline-block" ref={searchRef}>
+              <FaSearch onClick={() => setsearchOpen(!searchOpen)} className="cursor-pointer text-2xl text-[#EB6A2A]" />
+              {searchOpen && (
+                <div className="absolute right-0 mt-2   z-50 bg-white animate-fadeIn">
+                  <input type="text" placeholder="Find your product" className="p-3 border text-[ #959595] border-[#222222] w-[300px] h-[50px]  text-sm " />
+                </div>
+              )}
+            </div>
+            <div className=" cursor-pointer relative inline-block" onClick={() => setIsOpen(true)}>
               <LiaShoppingBagSolid className="text-3xl text-[#EB6A2A]" />
               <span className=" absolute -top-1 -right-1  bg-[#EB6A2A] text-white text-xs font-semibold w-5 h-5 flex items-center justify-center  rounded-full border-[#ffffff] border-2"> 0
               </span>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="relative">
+        {isOpen && (<div className="fixed inset-0 bg-black/50 z-40" onClick={() => setIsOpen(false)}></div>
+        )}
+        <div
+          className={`fixed top-0 right-0 h-full w-[400px] bg-white shadow-lg z-50 transform transition-transform duration-400 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+          <div className="p-4 flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold">Shopping cart</h2>
+              <button className="text-[13px] cursor-pointer self-end text-[#1C1C24] hover:text-blue-600 h-[30px] w-[30px] bg-gray-200 rounded-full font-extrabold" onClick={() => setIsOpen(false)}>
+                ✕
+              </button>
+            </div>
+            <span className="text-right text-[#4A4A4A]">No products in the cart. </span>
           </div>
         </div>
       </div>
