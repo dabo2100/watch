@@ -2,5 +2,6 @@
 @plugin "daisyui";
 
 :root{
-    --main-font:'Rubik'
+    --main-font:'Rubik';
+    --second-font:'Roboto';
 }
