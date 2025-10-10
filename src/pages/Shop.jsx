@@ -2,8 +2,8 @@ import Watch from "../assets/1-min.jpg";
 
 export default function Shop() {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="h-full bg-gray-50 p-8">
+      <div className="w-full h-full mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">
           Watch Shop
         </h1>
@@ -76,8 +76,8 @@ export default function Shop() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[1, 2, 3, 4, 5, 6 , 7, 8, 9].map((id) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 h-full">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((id) => (
                 <div
                   key={id}
                   className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden group"
@@ -137,8 +137,7 @@ export default function Shop() {
               <button className="px-3 py-1 border rounded">Next</button>
             </div>
 
-            <div className="mt-8">
-            </div>
+            <div className="mt-8"></div>
           </div>
         </div>
       </div>
