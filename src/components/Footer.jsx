@@ -52,10 +52,21 @@ export default function Footer() {
                 <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'> Las Vegas</a>
                 <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'>Albarto</a>
               </div>
-              <div onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className='rotate-270 flex items-center justify-center gap-2 w-[167px] h-[52px] bg-[#F07F13] rounded-[4px] absolute right-[30px] cursor-pointer'>
+              <div
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="
+    flex items-center justify-center gap-2
+    w-[167px] h-[52px] bg-[#F07F13] rounded-[4px] cursor-pointer
+    rotate-270
+    transition-all duration-300
+    sm:relative sm:mx-auto sm:mt-6
+    lg:absolute lg:right-[30px] lg:top-1/2 lg:-translate-y-1/2
+  "
+              >
                 <button className='text-white cursor-pointer'>BACK TOP</button>
                 <FaArrowRight className='text-white cursor-pointer' />
               </div>
+
             </div>
 
           </div>
@@ -63,7 +74,7 @@ export default function Footer() {
       </div>
       <div className="bg-[#1c1c24] w-full">
         <div className="container mx-auto p-4">
-          <div className="h-[80px] flex items-center justify-between">
+          <div className="h-[80px] flex flex-col lg:flex-row items-center justify-between">
             <p className="font-(family-name:--second-font) text-[14px] text-white text-sm md:text-base">© Copyrights By Xpeedstudio - 2018</p>
             <p className="font-(family-name:--second-font) text-[14px] text-white text-sm md:text-base"> Allow payment based on</p>
           </div>
