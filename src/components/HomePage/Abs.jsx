@@ -3,15 +3,15 @@ import a1 from "../../assets/HomePege/watch-bb-1.png";
 export default function Abs() {
   return (
     <>
-      <div className="md:max-w-screen-xl bg-[#F6F7FB] md:m-auto flex items-center justify-items-center overflow-hidden ">
-        <div>
+      <div className="md:max-w-screen-xl bg-[#F6F7FB] md:m-auto flex md:flex-row flex-col items-center justify-items-center overflow-hidden  ">
+        <div className="h-[500px]">
           <img
             src={a1}
             alt=""
-            className="h-[500px] hover:scale-110 duration-150"
+            className="h-[600px] hover:scale-110 duration-150"
           />
         </div>
-        <div className="w-1/3 flex flex-col gap-5">
+        <div className="min-w-1/3 flex flex-col gap-5 max-sm:p-10">
           <h2 className="text-3xl font-semibold leading-[48px] text-[#222222] ">
             We are the leading Luxury watch retailer in UK.
           </h2>
