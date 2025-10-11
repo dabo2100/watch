@@ -56,7 +56,7 @@ export default function SwiperApp() {
         className="mySwiper"
       >
         {slide.map((el, index) => (
-          <SwiperSlide className="bg-[#F6F7FB]">
+          <SwiperSlide className="bg-[#F6F7FB]" key={index}>
             <div className="con max-h-[660px] h-[660px] flex flex-row justify-center items-center bg-[#F6F7FB] ">
               <div className="tag-wrapper fixed bottom-25 flex w-full text-[190px] font-extrabold leading-[250px] text-[#EBECF0]">
                 {"TAGHEUER".split("").map((ch, i) => (
@@ -66,8 +66,8 @@ export default function SwiperApp() {
                 ))}
               </div>
 
-              <div className="flex flex-row justify-around items-center z-10 w-full">
-                <div className="flex flex-col items-start text-start w-1/2 gap-6">
+              <div className="flex flex-row justify-around items-center z-10 w-full max-sm:gap-8">
+                <div className="flex flex-col items-start text-start w-1/2 gap-4 md:gap-6">
                   <h2
                     className="text-[60px] font-bold leading-[70px] stagger-item"
                     style={{ "--order": 1 }}
@@ -76,7 +76,7 @@ export default function SwiperApp() {
                   </h2>
 
                   <p
-                    className="text-[#666666] text-[16px] leading-[28px] font-medium stagger-item"
+                    className="text-[#666666] text-[16px] leading-[28px] font-medium stagger-item slide-desc"
                     style={{ "--order": 2 }}
                   >
                     {el.disc}
@@ -92,7 +92,7 @@ export default function SwiperApp() {
                   </div>
 
                   <button
-                    className="py-4 px-10  bg-[#EB6A2A] hover:bg-[#7d3410] w-fit text-[16px] text-white font-medium leading-[17px] text-center stagger-item"
+                    className="py-4 px-10  bg-[#EB6A2A] hover:bg-[#7d3410] btn-cta text-[16px] text-white font-medium leading-[17px] text-center stagger-item"
                     style={{ "--order": 4 }}
                   >
                     view collection
@@ -102,8 +102,9 @@ export default function SwiperApp() {
                 <div className="stagger-item img" style={{ "--order": 5 }}>
                   <img
                     src={el.item}
-                    alt=""
-                    className="w-[500px] h-[500px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
+                    alt={el.title}
+                    // loading="lazy"
+                    className="min-sm:w-[200px] h-[500px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out slide-image"
                   />
                 </div>
               </div>

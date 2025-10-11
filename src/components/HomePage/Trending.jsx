@@ -7,7 +7,7 @@ import w2 from "../../assets/HomePege/2-min.jpg";
 import w3 from "../../assets/HomePege/3-min.jpg";
 import w4 from "../../assets/HomePege/7-min.jpg";
 
-export default function Trending({tittle}) {
+export default function Trending({ tittle }) {
   const [isHovered, setIsHovered] = useState(false);
 
   let prodact = [
@@ -43,13 +43,12 @@ export default function Trending({tittle}) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-[70px] justify-items-center">
-        <div className="pb-[55px] col-span-4">
-          <h2 className="text-[26px] font-medium leading-[26px] text-[#222222] ">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-[70px] md:justify-items-center">
+        <div className="pb-[55px] md:col-span-4 text-center">
+          <h2 className="text-[26px] font-medium leading-[26px] text-[#222222]">
             {tittle}
           </h2>
         </div>
-
         {prodact.map((el, index) => {
           const [isHovered, setIsHovered] = useState(false);
           return (
@@ -59,7 +58,7 @@ export default function Trending({tittle}) {
               onMouseLeave={() => setIsHovered(false)}
               className="relative"
             >
-              <div className="border-[1px] border-[#EFEFEF] p-[30px] flex flex-col gap-8">
+              <div className="border-[1px] border-[#EFEFEF] p-[30px] flex flex-col gap-8 max-sm:items-center">
                 <motion.div
                   initial={{ y: -20, opacity: 0 }}
                   animate={{
@@ -73,7 +72,11 @@ export default function Trending({tittle}) {
                 </motion.div>
 
                 <div className="">
-                  <img src={el.pic} className="hover:scale-105 transition duration-150" alt="" />
+                  <img
+                    src={el.pic}
+                    className="hover:scale-105 transition duration-150"
+                    alt=""
+                  />
                 </div>
                 <div>
                   <p className="text-[13px] font-medium leading-[19px] text-[#999999] cursor-pointer ">
