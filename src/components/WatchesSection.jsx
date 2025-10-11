@@ -165,7 +165,12 @@ export default function WatchesSection() {
 
         
         {index < categories.length - 1 && (
-          <div className="absolute top-1/4 right-0 h-1/2 w-[1px] bg-gray-300"></div>
+          <div className={`absolute top-1/4 right-0 h-1/2 w-[1px]
+            ${
+            activeCategory === el.id
+              ? "bg-blue-600 text-white"
+              : "bg-gray-300 hover:bg-blue-50"
+          }`}></div>
         )}
       </div>
     ))}
