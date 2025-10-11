@@ -43,8 +43,8 @@ export default function Trending({ tittle }) {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-[70px] md:justify-items-center">
-        <div className="pb-[55px] md:col-span-4 text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-[70px] md:justify-items-center">
+        <div className="pb-[55px] md:col-span-2 lg:col-span-4 text-center">
           <h2 className="text-[26px] font-medium leading-[26px] text-[#222222]">
             {tittle}
           </h2>

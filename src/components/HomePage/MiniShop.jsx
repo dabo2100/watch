@@ -11,11 +11,11 @@ export default function MiniShop() {
   const [isHovered, setIsHovered] = useState(false);
   let prodact = [
     {
-      name: "Drones Helicoprer",
-      type: "Dorne",
+      name: "Woman Gold Watch",
+      type: "Watch",
       pric: "$540.00",
-      oldPric: "$720.00",
-      pic: w4,
+      oldPric: "$640.00",
+      pic: w2,
     },
     {
       name: "HD LED TV",
@@ -25,11 +25,11 @@ export default function MiniShop() {
       pic: w1,
     },
     {
-      name: "Woman Gold Watch",
+      name: "Diamond Watches",
       type: "Watch",
-      pric: "$540.00",
-      oldPric: "$640.00",
-      pic: w2,
+      pric: "$210.00",
+      oldPric: "$310.00",
+      pic: w3,
     },
     {
       name: "Woman Gold Watch",
@@ -62,7 +62,7 @@ export default function MiniShop() {
           className="max-sm:hidden"
         />
         <div className="w-full">
-          <div className="flex flex-col items-center gap-3 md:gap-0 md:flex-row md:justify-between pb-3 border-b-[1px] border-[#EFEFEF] ">
+          <div className="flex flex-col items-center gap-3 lg:gap-0 lg:flex-row md:justify-between pb-3 border-b-[1px] border-[#EFEFEF] ">
             <h2 className="text-[22px] font-semibold leading-[22px] text-[#1C1C24] ">
               Discount Product
             </h2>
@@ -75,7 +75,7 @@ export default function MiniShop() {
               <span>Best Sell</span>
             </nav>
           </div>
-          <div className="grid gird-cols-1 md:grid-cols-3 gap-8 p-8 ">
+          <div className="grid gird-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:p-2 lg:p-8 ">
             {prodact.map((el, index) => {
               const [isHovered, setIsHovered] = useState(false);
               return (
@@ -98,10 +98,10 @@ export default function MiniShop() {
                       <CiHeart />
                     </motion.div>
 
-                    <div className="">
+                    <div className="w-[170px]">
                       <img
                         src={el.pic}
-                        className="hover:scale-105 transition duration-150"
+                        className="hover:scale-105  object-fill transition duration-150"
                         alt=""
                       />
                     </div>
