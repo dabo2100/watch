@@ -57,7 +57,7 @@ export default function SwiperApp() {
       >
         {slide.map((el, index) => (
           <SwiperSlide className="bg-[#F6F7FB]">
-            <div className="con w-[1279px] h-[660px] max-h-[660px] flex flex-row justify-around items-center bg-[#F6F7FB] ">
+            <div className="con max-h-[660px] h-[660px] flex flex-row justify-center items-center bg-[#F6F7FB] ">
               <div className="tag-wrapper fixed bottom-25 flex w-full text-[190px] font-extrabold leading-[250px] text-[#EBECF0]">
                 {"TAGHEUER".split("").map((ch, i) => (
                   <span key={i} className="tag-letter" style={{ "--order": i }}>
@@ -67,7 +67,7 @@ export default function SwiperApp() {
               </div>
 
               <div className="flex flex-row justify-around items-center z-10 w-full">
-                <div className="flex flex-col items-start text-start w-1/2 gap-4">
+                <div className="flex flex-col items-start text-start w-1/2 gap-6">
                   <h2
                     className="text-[60px] font-bold leading-[70px] stagger-item"
                     style={{ "--order": 1 }}
