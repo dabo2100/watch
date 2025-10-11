@@ -1,6 +1,7 @@
 import Hero from "../components/HeroSec/Hero";
 import AbsLine from "../components/HomePage/AbsLine";
 import Trending from "../components/HomePage/Trending";
+import Brands from "../components/HomePage/Brands";
 
 //img
 import w1 from "../assets/HomePege/1-min.jpg";
@@ -9,9 +10,8 @@ import w3 from "../assets/HomePege/3-min.jpg";
 import w4 from "../assets/HomePege/7-min.jpg";
 
 export default function HomePage() {
-
-  let tittle= "Top Brands"
-  let tittle2= "Most Viewed"
+  let tittle = "Top Brands";
+  let tittle2 = "Most Viewed";
   let prodact = [
     {
       name: "Drones Helicoprer",
@@ -50,6 +50,7 @@ export default function HomePage() {
         <div className="max-w-screen-xl mx-auto px-4">
           <AbsLine />
           <Trending tittle={tittle} />
+          <Brands />
           <Trending tittle={tittle2} />
         </div>
       </div>
