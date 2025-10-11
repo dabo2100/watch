@@ -24,7 +24,7 @@ export default function Product() {
 
       </div>
         
-        <div className=" w-full flex justify-center bg-gray-200">
+        <div className=" w-full h-[259.6px] flex justify-center items-center  bg-gray-200">
             <NewsletterProduct/>
         </div>
     </div>

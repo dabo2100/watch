@@ -2,7 +2,7 @@
 
 export default function NewsletterProduct() {
   return (
-    <div className="flex justify-between items-center w-[1350px] flex-col md:flex-row gap-4 h-full md:h-50 px-6 md:px-20  py-8">
+    <div className="flex lg:justify-between justify-center items-center w-[1140px] flex-col md:flex-row gap-4 h-full md:h-50 md:px-20  ">
           <div className="text-center md:text-left">
             <h1 className="font-semibold text-xl md:text-2xl">Newsletter & Get Updates</h1>
             <p className="text-sm text-gray-500">Sign up for our newsletter to get up-to-date from us</p>
