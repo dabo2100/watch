@@ -58,7 +58,7 @@ export default function Trending({ tittle }) {
               onMouseLeave={() => setIsHovered(false)}
               className="relative"
             >
-              <div className="border-[1px] border-[#EFEFEF] p-[30px] flex flex-col gap-8 max-sm:items-center">
+              <div className="border-[1px] border-[#EFEFEF] p-[30px] flex flex-col gap-8 max-sm:items-center hover:shadow-md rounded-xl">
                 <motion.div
                   initial={{ y: -20, opacity: 0 }}
                   animate={{

@@ -85,7 +85,7 @@ export default function MiniShop() {
                   onMouseLeave={() => setIsHovered(false)}
                   className="relative"
                 >
-                  <div className="border-[1px] border-[#EFEFEF] w-fit p-[30px] flex flex-col gap-8 max-sm:items-center">
+                  <div className="rounded-xl border-[#EFEFEF] w-fit p-[30px] flex flex-col gap-8 max-sm:items-center hover:shadow-md">
                     <motion.div
                       initial={{ y: -20, opacity: 0 }}
                       animate={{
