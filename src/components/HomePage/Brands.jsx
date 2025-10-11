@@ -17,7 +17,6 @@ function Brands() {
   return (
     <div
       style={{
-        height: "200px",
         position: "relative",
         overflow: "hidden",
         paddingTop: "70px",
