@@ -2,7 +2,7 @@ import footerLogo from '/src/assets/footer-logo.png'
 import { IoLocationOutline } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa6";
 
-
+let linkStyle = 'mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'
 export default function Footer() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
@@ -34,7 +34,7 @@ export default function Footer() {
             <div className='grid grid-cols-5 col-span-2 items-center relative '>
               <div className='flex flex-col  col-span-2'>
                 <h1 className='font-(family-name:--second-font) text-[18px] text-[#1C1C24] font-medium'>Quick Links</h1>
-                <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'>Support Center</a>
+                <a href="" className={linkStyle}>Support Center</a>
                 <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'>Term & Conditions</a>
                 <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'>Shipping</a>
                 <a href="" className='mt-3 font-medium text-[#4A4A4A] font-(family-name:--second-font) text-[14px] hover:text-[#0063D1]'>Privacy Policy</a>
