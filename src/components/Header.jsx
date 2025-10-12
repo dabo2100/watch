@@ -28,9 +28,10 @@ export default function Header() {
   }, []);
 
   return (
-    <div className=" w-full flex flex-col items-center  bg-[#fafafa] ">
-      <div className=" container bg-[#fafafa] w-full ">
-        <div className=" border-b border-[#d9d9d9] hidden md:flex items-center justify-between p-4">
+    <div className=" w-full flex flex-col items-center  bg-[#f6f7fb] ">
+        
+      <div className=" flex flex-col justify-center items-center  bg-[#f6f7fb] w-full ">
+        <div className="container max-w-[1140px] hidden md:flex items-center justify-between p-4">
           <div className="flex items-center gap-6 ">
             <div className="flex items-center gap-4 ">
               <LiaShuttleVanSolid size={20} />
@@ -56,8 +57,11 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="sticky top-0 z-50 bg-[#fafafa]">
-          <div className="container mx-auto flex items-center justify-between h-[106px] border-b border-[#d9d9d9] p-4">
+
+        <div className="bg-gray-300 h-px border w-full"></div>
+
+        <div className="sticky top-0 z-50 w-full bg-[#f6f7fb]">
+          <div className="container max-w-[1140px] mx-auto flex items-center justify-between h-[106px]  p-4">
             <img src={logo} alt="" />
             <nav className="hidden lg:flex items-center gap-12  ">
               
@@ -130,6 +134,7 @@ export default function Header() {
             </div>
           </div>
         </div>
+        <div className="bg-gray-300 h-px border w-full"></div>
       </div>
       <div className="relative">
         {isOpen && (<div className="fixed inset-0 bg-black/50 z-40" onClick={() => setIsOpen(false)}></div>
