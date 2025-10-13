@@ -15,8 +15,8 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -118,11 +118,11 @@
     padding: 24px 12px;
   }
 
-  .con .stagger-item.img img,
+  /* .con .stagger-item.img img,
   .slide-image {
     width: 260px !important;
     height: 260px !important;
-  }
+  } */
 
   .con .stagger-item h2,
   .con h2 {

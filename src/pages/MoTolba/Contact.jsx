@@ -3,9 +3,9 @@ import { SlArrowRight } from "react-icons/sl";
 import bannerTop from "../../assets/bannerTop.png";
 export default function Contact() {
   return (
-    <section>
-      <div className=" w-full flex flex-col items-center justify-center bg-gray-50 p-6 gap-6">
-        <div className=" w-full flex  items-center gap-3 py-10 bg-[#f1eded] rounded-2xl px-6 shadow-lg border border-gray-200">
+    <section className=" w-full flex flex-col items-center justify-center py-10 gap-10">
+      <div className=" w-full flex flex-col items-center justify-center bg-white p-6 gap-6">
+        <div className=" w-full flex  items-center gap-3 py-5 bg-[#fafafa] rounded-2xl px-6 border border-gray-200">
           {/* زر الرجوع للرئيسية */}
           <Link to="/" className=" flex items-center gap-3 text-gray-800">
             Home <SlArrowRight />

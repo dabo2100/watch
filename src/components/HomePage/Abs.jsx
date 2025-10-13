@@ -19,7 +19,7 @@ export default function Abs() {
             Stocking the finest luxury watch brands, we specialise in sourcing
             new and used quality timepieces through our website
           </p>
-          <button className="bg-[#222222] text-white px-11 py-3.5 w-fit">VIEW COLLECTIONS</button>
+          <button className="bg-[#222222] hover:bg-[#444444] text-white px-11 py-3.5 w-fit">VIEW COLLECTIONS</button>
         </div>
       </div>
     </>

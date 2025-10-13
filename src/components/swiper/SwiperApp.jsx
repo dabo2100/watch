@@ -1,6 +1,7 @@
 import item1 from "../../assets/heroSec/banner_watch.png";
 import item2 from "../../assets/heroSec/banner_img2-min.png";
 import item3 from "../../assets/heroSec/banner_img3-min.png";
+import itermWater from "../../assets/heroSec/water.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,6 +18,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 let slide = [
   {
     item: item1,
+    water: itermWater,
     title: " Cagarny 6839",
     pric: "1,200",
     oldPric: "1,500",
@@ -99,13 +101,24 @@ export default function SwiperApp() {
                   </button>
                 </div>
 
-                <div className="stagger-item img" style={{ "--order": 5 }}>
-                  <img
-                    src={el.item}
-                    alt={el.title}
-                    // loading="lazy"
-                    className="min-sm:w-[200px] h-[500px] object-contain hover:scale-105 transition-transform duration-300 ease-in-out slide-image"
-                  />
+                <div className="stagger-item img w-[600px] flex flex-col items-center slide-image" style={{ "--order": 5 }} >
+                  {el.water && (
+                    <img
+                      src={el.water}
+                      className=" object-cover z-20 w-[600px] right-0 bottom-[-150px] lg:bottom-[-190px] absolute ease-in-out slide-image transition-transform duration-300"
+                    />
+                  )}
+                  <div
+                    className="stagger-item img flex flex-col relative justify-center"
+                    style={{ "--order": 5 }}
+                  >
+                    <img
+                      src={el.item}
+                      alt={el.title}
+                      // loading="lazy"
+                      className="max-sm:w-[200px] w-[371px]  object-contain hover:scale-105 transition-transform duration-300 ease-in-out slide-image"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
