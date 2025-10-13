@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 export default function AboutUsPage() {
   return (
@@ -11,7 +12,7 @@ export default function AboutUsPage() {
           {/* Breadcrumb */}
           <div className="flex w-full bg-gray-200 h-18 px-4 py-3">
             <h3 className="flex items-center text-sm sm:text-base">
-              <a href="/HomePage" className="text-gray-600">Home</a>&nbsp; / &nbsp;About Us
+              <Link href="/" className="text-gray-600">Home</Link>&nbsp; / &nbsp;About Us
             </h3>
           </div>
 
