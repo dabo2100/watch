@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import Product from "./pages/Product";
 import AboutUsPage from "./pages/AboutUsPage";
 import Contact from "./pages/MoTolba/Contact";
+import WishlistPage from "./pages/WishlistPage";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
             <Route path="AboutUs" element={<AboutUsPage/>}/>
+            <Route path="wishlist" element={<WishlistPage/>}/>
             <Route path="products" element={<Product />} />
             <Route
               path="products/:category_id"
