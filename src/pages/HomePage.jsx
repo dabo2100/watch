@@ -4,6 +4,7 @@ import Trending from "../components/HomePage/Trending";
 import Brands from "../components/HomePage/Brands";
 import MiniShop from "../components/HomePage/MiniShop";
 import Abs from "../components/HomePage/Abs";
+import Flag from "../components/HomePage/Flag";
 
 export default function HomePage() {
   let tittle = "Trending Now";
@@ -27,6 +28,9 @@ export default function HomePage() {
           <MiniShop />
           <Trending tittle={tittle2} />
         </div>
+      </div>
+      <div className="bg-[#F6F7FB] w-full mt-[70px]">
+        <Flag />
       </div>
     </div>
   );

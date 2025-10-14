@@ -10,6 +10,7 @@ import logo from '/src/assets/logo.png'
 import { FaChevronDown } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,9 +28,10 @@ export default function Header() {
   }, []);
 
   return (
-    <div className=" w-full flex flex-col items-center  bg-[#fafafa] ">
-      <div className=" container bg-[#fafafa] w-full ">
-        <div className=" border-b border-[#d9d9d9] hidden md:flex items-center justify-between p-4">
+    <div className=" w-full flex flex-col items-center  bg-[#f6f7fb] ">
+        
+      <div className=" flex flex-col justify-center items-center  bg-[#f6f7fb] w-full ">
+        <div className="container max-w-[1140px] hidden md:flex items-center justify-between p-4">
           <div className="flex items-center gap-6 ">
             <div className="flex items-center gap-4 ">
               <LiaShuttleVanSolid size={20} />
@@ -55,11 +57,15 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="sticky top-0 z-50 bg-[#fafafa]">
-          <div className="container mx-auto flex items-center justify-between h-[106px] border-b border-[#d9d9d9] p-4">
+
+        <div className="bg-gray-300 h-px border w-full"></div>
+
+        <div className="sticky top-0 z-50 w-full bg-[#f6f7fb]">
+          <div className="container max-w-[1140px] mx-auto flex items-center justify-between h-[106px]  p-4">
             <img src={logo} alt="" />
             <nav className="hidden lg:flex items-center gap-12  ">
-              <a href="" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Home</a>
+              
+              <Link to="/" className="font-(family-name:--main-font) text-[14px] text-[#333E48] font-semibold">Home</Link>
               <div className="relative group inline-block">
                 <a href="#" className="text-[14px] text-[#333E48] font-semibold flex items-center gap-2 cursor-pointer font-(family-name:--main-font)" style={{ fontFamily: "var(--main-font)" }}>
                   Pages
@@ -67,11 +73,11 @@ export default function Header() {
                 </a>
                 <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
                 <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
-                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">About Us</a></li>
-                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Contact</a></li>
+                  <li><Link to="/AboutUs" className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">About Us</Link></li>
+                  <li><Link to="/Contact" className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Contact</Link></li>
                   <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">FAQ</a></li>
                   <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Terms & Conditions</a></li>
-                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Products</a></li>
+                  <li><Link to="/Products" className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Products</Link></li>
                 </ul>
               </div>
               <div className="relative group inline-block">
@@ -81,7 +87,7 @@ export default function Header() {
                 </a>
                 <div className="absolute left-0 top-full h-3 w-full bg-transparent group-hover:block"></div>
                 <ul className="absolute left-0 mt-2 hidden w-52 bg-white shadow-md rounded-md py-2 group-hover:block z-50">
-                  <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Shop </a></li>
+                  <li><Link to="/Shop" className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Shop </Link></li>
                   <li><a className="block px-4 py-2 text-[#464646]  hover:text-blue-400 text-[14px] font-(family-name:--main-font)">Wishlist</a></li>
                 </ul>
               </div>
@@ -128,6 +134,7 @@ export default function Header() {
             </div>
           </div>
         </div>
+        <div className="bg-gray-300 h-px border w-full"></div>
       </div>
       <div className="relative">
         {isOpen && (<div className="fixed inset-0 bg-black/50 z-40" onClick={() => setIsOpen(false)}></div>
