@@ -5,12 +5,9 @@ import HomePage from "./pages/HomePage";
 import Product from "./pages/Product";
 import AboutUsPage from "./pages/AboutUsPage";
 import Contact from "./pages/MoTolba/Contact";
-<<<<<<< HEAD
 import CartPage from "./pages/CartPage";
-=======
 import Login from "./loginpage/Login"
 import WishlistPage from "./pages/WishlistPage";
->>>>>>> 8393cb12bd857c9943ce4697b1bc6bdff5d3f20b
 
 export default function App() {
   return (
