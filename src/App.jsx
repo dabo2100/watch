@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import Contact from "./pages/MoTolba/Contact";
 import Login from "./loginpage/Login"
 import WishlistPage from "./pages/WishlistPage";
+import Details from "./pages/details/Details"
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
               path="products/:product_id"
               element={<h1>Prodcut Details</h1>}
             />
+            <Route path="Details" element={<Details/>}/>
             <Route path="about" element={<h1>About Us Page Details</h1>} />
             <Route path="contact" element={<Contact />} />
             <Route path="Shop" element={<Shop />} />
