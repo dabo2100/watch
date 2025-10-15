@@ -10,7 +10,7 @@ import logo from '/src/assets/logo.png'
 import { FaChevronDown } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,9 +52,9 @@ export default function Header() {
             </div>
           </div>
           <div>
-            <button className="cursor-pointer font-(family-name:--main-font) text-[13px] hover:text-white ">
+          <Link to="/src/loginpage/Login.jsx" className="cursor-pointer font-(family-name:--main-font) text-[13px] hover:text-white ">
               Login
-            </button>
+            </Link>
           </div>
         </div>
 
