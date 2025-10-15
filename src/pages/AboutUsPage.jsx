@@ -17,7 +17,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* OUR HISTORY */}
-          <div className="flex flex-col md:flex-row justify-between items-center py-16 px-6 md:px-16 lg:px-32 gap-10">
+          <div className="flex flex-col md:flex-row justify-between items-center py-16 px-6 md:px-16 lg:px-32 gap-10" data-aos="fade-up">
             {/* Text */}
             <div className="w-full md:w-1/2">
               <h1 className="text-blue-700 font-medium text-lg">OUR HISTORY</h1>
@@ -73,16 +73,16 @@ export default function AboutUsPage() {
             <h1 className="text-blue-700 text-lg">ANGELS</h1>
             <h1 className="font-bold text-2xl md:text-3xl mb-8">Meet with our Team</h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {[
-                { id: 1, img: "1.png", role: "FOUNDER", name: "Tony Williamson" },
-                { id: 2, img: "2.png", role: "CEO", name: "William Hanah" },
-                { id: 3, img: "3.png", role: "ADVISOR", name: "JInglo Jelian" },
-                { id: 4, img: "4.png", role: "DESIGNER", name: "Jony Smith" },
-                { id: 5, img: "2.png", role: "FOUNDER", name: "Tony Williamson" },
-                { id: 6, img: "3.png", role: "CEO", name: "William Hanah" },
-                { id: 7, img: "4.png", role: "ADVISOR", name: "JInglo Jelian" },
-                { id: 8, img: "1.png", role: "DESIGNER", name: "Jony Smith" },
+                { id: 1, img: "1.jpg", role: "FOUNDER", name: "Tarek" },
+                { id: 2, img: "2.jpg", role: "CEO", name: "Marwan" },
+                { id: 3, img: "3.jpg", role: "ADVISOR", name: "Tolba" },
+                { id: 4, img: "4.jpg", role: "DESIGNER", name: "M.Kamel" },
+                { id: 5, img: "2.jpg", role: "FOUNDER", name: "Marwan" },
+                { id: 6, img: "3.jpg", role: "CEO", name: "Tolba" },
+                { id: 7, img: "4.jpg", role: "ADVISOR", name: "M.Kamel" },
+                { id: 8, img: "1.jpg", role: "DESIGNER", name: "Tarek" },
               ].map((member) => (
                 <div key={member.id} className="relative overflow-hidden rounded-xl shadow-lg bg-white">
                   <div className="relative w-full h-72 overflow-hidden">
