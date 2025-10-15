@@ -1,9 +1,16 @@
-import { domain } from '../../store';
+import { useNavigate } from 'react-router-dom';
+import { cart, domain } from '../../store';
 import StartIcon from './StartIcon';
 
 export default function WatchCard({ product }) {
+  const navigate = useNavigate();
+  const { addToCart } = cart();
+  const handleAdd = (event) => {
+    event.stopPropagation();
+    addToCart(product);
+  };
   return (
-    <div className="bg-white rounded-lg shadow-sm hover:shadow-xl transition duration-300 overflow-hidden group">
+    <div onClick={() => navigate('/shop/' + product.documentId)} className="bg-white rounded-lg shadow-sm hover:shadow-xl transition duration-300 overflow-hidden group">
       <div className="relative overflow-hidden">
         <img src={domain + product.img?.url} alt={product.name} className="w-full h-64 object-cover group-hover:scale-110 transition duration-300" />
         {product.discount && <span className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">-{product.discount}%</span>}
@@ -26,7 +33,9 @@ export default function WatchCard({ product }) {
           {product.originalPrice && <span className="text-sm text-gray-400 line-through">${product.originalPrice}</span>}
         </div>
 
-        <button className="w-full bg-slate-900 text-white py-3 rounded-lg hover:bg-slate-800 transition font-medium">Add to Cart</button>
+        <button onClick={handleAdd} className="w-full bg-slate-900 text-white py-3 rounded-lg hover:bg-slate-800 transition font-medium">
+          Add to Cart
+        </button>
       </div>
     </div>
   );

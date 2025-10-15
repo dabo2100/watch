@@ -30,7 +30,6 @@ export default function Login() {
       .post(url, data)
       .then((res) => {
         sessionStorage.setItem('jwt', res.data.jwt);
-
       })
       .catch((err) => {
         toast.error(err.response.data.error.message);
