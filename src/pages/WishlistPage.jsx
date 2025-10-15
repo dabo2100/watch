@@ -55,7 +55,7 @@ export default function WishlistPage() {
               <Link href="/" className="text-gray-600">
                 Home
               </Link>
-              &nbsp; / &nbsp;About Us
+              &nbsp; / &nbsp;wishlist
             </h3>
           </div>
           <h1 className=" text-3xl font-semibold p-8 overflow-hidden w-fill">
