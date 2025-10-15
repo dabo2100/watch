@@ -52,7 +52,7 @@ export default function Header() {
             </div>
           </div>
           <div>
-          <Link to="/src/loginpage/Login.jsx" className="cursor-pointer font-(family-name:--main-font) text-[13px] hover:text-white ">
+          <Link to="/Login" className="cursor-pointer font-(family-name:--main-font) text-[13px] hover:text-white ">
               Login
             </Link>
           </div>
