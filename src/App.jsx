@@ -10,6 +10,7 @@ import Login from './loginpage/Login';
 import WishlistPage from './pages/WishlistPage';
 import Details from './pages/details/Details';
 import { Toaster } from 'react-hot-toast';
+import ErorrPage from './pages/ErorrPage';
 
 export default function App() {
   return (
@@ -35,7 +36,7 @@ export default function App() {
             <Route path="Cart" element={<CartPage />} />
           </Route>
           <Route path="Login" element={<Login />} />
-          <Route path="*" element={<h1>404 Page | Page Not Found</h1>} />
+          <Route path="*" element={<ErorrPage/>} />
         </Routes>
       </BrowserRouter>
     </div>
