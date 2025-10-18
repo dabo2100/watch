@@ -27,7 +27,7 @@ export default function Contact() {
               the best user experience for your entire community of donors,
               fundraisers, customers, and staff.
             </p>
-            <span>[contact-form-7 id="1143" title="Contact Us"]</span>
+            <span>Welcome to the beautiful Kafr El-Sheikh Governorate! 🌿</span>
           </div>
           <div className="w-80 h-80"></div>
         </div>
@@ -49,8 +49,6 @@ export default function Contact() {
         <div className="flex items-center justify-center w-full overflow-hidden p-5">
           <img src={bannerTop} />
         </div>
-
-
 
       </div> */}
     </section>
