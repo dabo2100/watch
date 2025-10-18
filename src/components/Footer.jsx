@@ -1,5 +1,4 @@
-
-import {UpperFooter} from '../components/FooterComponent/UpperFooter'
+import UpperFooter from '../components/FooterComponent/UpperFooter'
 export default function Footer() {
   return (
     <div className="flex flex-col items-center justify-center w-full">
