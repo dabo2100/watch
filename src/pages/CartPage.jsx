@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartTable from '../components/CartTable'
 import CartSubtotal from '../components/CartSubtotal'
+import { cart } from '../store'
 
 export default function CartPage() {
   return (
