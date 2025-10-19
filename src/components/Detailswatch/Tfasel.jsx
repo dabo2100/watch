@@ -16,11 +16,6 @@ export default function Tfasel({ product }) {
         <h2 className="text-3xl">${product.price}</h2>
         <p className="text-amber-600">13 in stock</p>
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2">
-            <button className="btn btn-outline">+</button>
-            <button className="btn btn-outline w-4"> 1 </button>
-            <button className="btn btn-outline">-</button>
-          </div>
           <button className="btn btn-outline btn-warning">Add to cart</button>
         </div>
       </div>
